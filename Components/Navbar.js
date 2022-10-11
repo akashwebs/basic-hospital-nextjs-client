@@ -13,6 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import Link from "next/link";
+import Image from "next/image";
 
 const pages = [
   { name: "Products", route: "products" },
@@ -41,11 +42,11 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ background: "#556cd6" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Link href={"/"}>
+          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
+          <div>
             <Typography
               variant="h6"
               noWrap
@@ -53,15 +54,18 @@ const Navbar = () => {
                 mr: 2,
                 display: { xs: "none", md: "flex" },
                 fontFamily: "monospace",
+                alignItems: "center",
                 fontWeight: 700,
-                letterSpacing: ".3rem",
                 color: "inherit",
                 textDecoration: "none",
+                py: 2,
               }}
             >
-              LOGO
+              <Image src="/logo.png" width={70} height={70} />
+              {/* ----------logo------------------ */}
+              বেসিক এইড এন্ড হসপিটাল
             </Typography>
-          </Link>
+          </div>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -101,7 +105,6 @@ const Navbar = () => {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -113,12 +116,15 @@ const Navbar = () => {
               flexGrow: 1,
               fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              fontSize: "12px",
+              alignItems: "center",
             }}
           >
-            LOGO
+            <Image src="/logo.png" width={35} height={35} />
+            {/* ----------logo------------------ */}
+            বেসিক এইড এন্ড হসপিটাল
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (

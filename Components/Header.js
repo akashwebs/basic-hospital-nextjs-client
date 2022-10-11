@@ -3,40 +3,48 @@ import { Container } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-fade";
+import "swiper/css/effect-creative";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // import "../styles/Header.css";
 
-import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
+import { Autoplay, EffectCreative, Pagination } from "swiper";
 const Header = () => {
   return (
     <Swiper
       spaceBetween={30}
-      effect={"fade"}
+      effect={"creative"}
+      creativeEffect={{
+        prev: {
+          shadow: true,
+          translate: [0, 0, -400],
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
+      }}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
       }}
-      navigation={true}
       pagination={{
         clickable: true,
       }}
-      modules={[Autoplay, EffectFade, Navigation, Pagination]}
+      modules={[Autoplay, EffectCreative, Pagination]}
       className="mySwiper"
     >
       <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+        <img src="./cover1.jpg" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        <img src="./cover1.jpg" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        <img src="./cover1.jpg" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        <img src="./cover1.jpg" />
       </SwiperSlide>
     </Swiper>
   );
