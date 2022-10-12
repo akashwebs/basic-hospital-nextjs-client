@@ -61,7 +61,7 @@ const AppoimnetModals = ({ open, setOpen }) => {
             columns={{ xs: 1, sm: 1, md: 8 }}
           >
             <Grid item xs={2} sm={4} md={4} sx={{ height: "100%" }}>
-              <Item>
+              <Item variant="none">
                 <Image
                   src="https://dhakadoctor-sg.s3.amazonaws.com/media/doctor_profile/Dr._Selina_Husna_Banu.jpg"
                   alt="Picture of the author"
@@ -71,7 +71,7 @@ const AppoimnetModals = ({ open, setOpen }) => {
                 <Typography
                   variant="h6"
                   component={"h6"}
-                  sx={{ color: "#000" }}
+                  sx={{ color: "#000", fontSize: { xs: "1rem", sm: "1.5rem" } }}
                 >
                   শিশু নিউরোলজি বিশেষজ্ঞ
                 </Typography>
@@ -103,16 +103,20 @@ const AppoimnetModals = ({ open, setOpen }) => {
                     component={"p"}
                     sx={{
                       color: "#000",
-                      fontSize: "1.3rem",
-                      marginTop: "35px",
+                      marginTop: { xs: "20px", sm: "35px" },
+                      fontSize: { xs: "1rem", sm: "1.3rem" },
                     }}
                   >
-                    রোগী দেখেনঃ শনিবার - বৃহস্পতিবার
+                    রোগী দেখেনঃ <br /> শনিবার - বৃহস্পতিবার
                   </Typography>
                   <Typography
                     variant="p"
                     component={"p"}
-                    sx={{ color: "#000", fontSize: "1.3rem", marginTop: "5px" }}
+                    sx={{
+                      color: "#000",
+                      marginTop: "5px",
+                      fontSize: { xs: "1rem", sm: "1.3rem" },
+                    }}
                   >
                     দুপুর ৩টা - রাত ৮টা
                   </Typography>
@@ -121,16 +125,21 @@ const AppoimnetModals = ({ open, setOpen }) => {
                     component={"p"}
                     sx={{
                       color: "#000",
-                      fontSize: "1.3rem",
-                      marginTop: "35px",
+                      marginTop: { xs: "15px", sm: "35px" },
+                      fontSize: { xs: "1rem", sm: "1.3rem" },
+                      fontWeight: "bold",
                     }}
                   >
-                    সিরিয়ােলর জন্যঃ 01818 410 710
+                    সিরিয়ােলর জন্যঃ<br></br> 01818 410 710
                   </Typography>
                   <Typography
                     variant="p"
                     component={"p"}
-                    sx={{ color: "#000", fontSize: "1.3rem", marginTop: "5px" }}
+                    sx={{
+                      color: "#000",
+                      marginTop: "5px",
+                      fontSize: { xs: "1rem", sm: "1.3rem" },
+                    }}
                   >
                     রুম নাম্বারঃ ২০২
                   </Typography>

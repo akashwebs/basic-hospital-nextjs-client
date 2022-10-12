@@ -17,7 +17,6 @@ const AboutUs = () => {
       maxWidth="lg"
       component="div"
       sx={{
-        borderTop: (theme) => `1px solid ${theme.palette.divider}`,
         mt: 4,
         py: [3, 6],
       }}

@@ -14,11 +14,15 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import Link from "next/link";
 import Image from "next/image";
+import { border } from "@mui/system";
 
 const pages = [
-  { name: "Products", route: "products" },
-  { name: "Pricing", route: "pricing" },
-  { name: "Blog", route: "blogs" },
+  { name: "Home", route: "" },
+  { name: "Doctors", route: "doctors" },
+  { name: "Helth Tips", route: "helth-tips" },
+  { name: "Image Gallary", route: "image-gallary" },
+  { name: "About Us", route: "about" },
+  { name: "Contact Us", route: "contact-us" },
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -126,13 +130,25 @@ const Navbar = () => {
             {/* ----------logo------------------ */}
             বেসিক এইড এন্ড হসপিটাল
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex", justifyContent: "end" },
+            }}
+          >
             {pages.map((page) => (
               <Link href={`/${page.route}`}>
                 <Button
                   key={page.name}
+                  variant="contained"
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{
+                    my: 2,
+                    color: "white",
+                    display: "block",
+                    // border: "1px solid #fff",
+                    mr: 1,
+                  }}
                 >
                   {page.name}
                 </Button>

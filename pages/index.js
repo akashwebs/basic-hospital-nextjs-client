@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import Head from "next/head";
-import Image from "next/image";
+
 import AboutUs from "../Components/AboutUs";
 import AllDoctors from "../Components/AllDoctors";
 import GoogleMap from "../Components/GoogleMap";

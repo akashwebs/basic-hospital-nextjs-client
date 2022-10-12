@@ -1,6 +1,5 @@
 import { Grid, Paper, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
-import React from "react";
 import MedicalServicesIcon from "@mui/icons-material/MedicalServices";
 import PhoneForwardedIcon from "@mui/icons-material/PhoneForwarded";
 import LocalPharmacyIcon from "@mui/icons-material/LocalPharmacy";

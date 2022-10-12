@@ -4,14 +4,29 @@ import React from "react";
 const Heading = ({ children }) => {
   return (
     <Divider>
-      <Typography
-        variant="h5"
-        component={"h5"}
-        // sx={{ textAlign: "center", fontSize: "3rem", margin: "25px 0 10px" }}
-        className="text-5xl my-8"
-      >
-        {children}
-      </Typography>
+   
+        <Typography
+          variant="h6"
+          color="#fff"
+          gutterBottom
+          sx={{
+            fontSize: { xs: "20px", md: "35px" },
+            fontWeight: "bold",
+            mt: 4,
+          }}
+        >
+          {children}
+        </Typography>
+        <div
+          style={{
+            height: "2px",
+            width: "45%",
+            background: "#fff",
+            marginTop: { xs: "15px", sm: "-15px" },
+            marginBottom: "15px",
+          }}
+        ></div>
+   
     </Divider>
   );
 };
