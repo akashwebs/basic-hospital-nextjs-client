@@ -1,4 +1,5 @@
 import {
+  Alert,
   Box,
   Button,
   Container,
@@ -7,16 +8,38 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useRef, useState } from "react";
 import Heading from "../Components/Heading";
 import Image from "next/image";
 import PhoneForwardedIcon from "@mui/icons-material/PhoneForwarded";
 import EditLocationAltIcon from "@mui/icons-material/EditLocationAlt";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
+import emailjs from "@emailjs/browser";
 
 const contact = () => {
-  const handleSubmit = (e) => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
     e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_qdzy3ne",
+        "template_pvoe49y",
+        form.current,
+        "8xB3OO6LTpJMX5uc_"
+      )
+      .then(
+        (result) => {
+          if (result.text === "OK") {
+            return <Alert severity="success">This is a success message!</Alert>;
+          }
+        },
+        (error) => {
+          if (error.text) {
+            alert("please try again ", error.text);
+          }
+        }
+      );
   };
 
   return (
@@ -41,8 +64,9 @@ const contact = () => {
                 </Typography>
                 <Box
                   component="form"
-                  onSubmit={handleSubmit}
-                  noValidate
+                  ref={form}
+                  onSubmit={sendEmail}
+                  // noValidate
                   sx={{ mt: 1 }}
                 >
                   <TextField
@@ -51,6 +75,7 @@ const contact = () => {
                     label="Your Name"
                     fullWidth
                     color="success"
+                    name="user_name"
                   />
                   <TextField
                     required
@@ -59,24 +84,27 @@ const contact = () => {
                     fullWidth
                     color="success"
                     sx={{ margin: "10px 0" }}
+                    type={"email"}
+                    name="user_email"
                   />
 
                   <TextField
                     placeholder="Your Messages"
                     multiline
-                    rows={5}
                     maxRows={6}
+                    minRows={3}
                     fullWidth
+                    name="message"
                   />
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    sx={{ mt: 3, mb: 2 }}
+                  >
+                    Send Message
+                  </Button>
                 </Box>
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  sx={{ mt: 3, mb: 2 }}
-                >
-                  Send Message
-                </Button>
               </Box>
             </Paper>
           </Grid>
