@@ -11,12 +11,16 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea } from "@mui/material";
 import AppoimnetModals from "./AppoimnetModals";
 import { OpenInNew } from "@mui/icons-material";
-import React from "react";
+import React, { useState } from "react";
 
-const AllDoctors = () => {
+const AllDoctors = ({ doctors }) => {
   const [open, setOpen] = React.useState(false);
+  const [modalDoctor, setModalDoctor] = useState({});
 
-  const handleOpen = () => setOpen(true);
+  const handleOpen = (data) => {
+    setOpen(true);
+    setModalDoctor(data);
+  };
 
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -29,21 +33,21 @@ const AllDoctors = () => {
   return (
     <Container maxWidth="xl">
       <Heading>বিশেষজ্ঞ চিকিৎসকগন</Heading>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1 }} mt={2}>
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 1, sm: 8, md: 16 }}
         >
-          {Array.from(Array(8)).map((_, index) => (
+          {doctors?.map((doctor, index) => (
             <Grid item xs={2} sm={4} md={4} key={index}>
-              <Item variant="div" component="div">
-                <Card sx={{ maxWidth: 500 }}>
-                  <div>
+              <Item variant="div" component="div" sx={{ height: "100%" }}>
+                <Card sx={{ maxWidth: 500, height: "100%" }}>
+                  <div style={{ height: "100%" }}>
                     <CardMedia
                       component="img"
                       height="250"
-                      image="https://dhakadoctor-sg.s3.amazonaws.com/media/doctor_profile/Dr._Selina_Husna_Banu.jpg"
+                      image={doctor?.img}
                       alt="green iguana"
                     />
                     <CardContent>
@@ -54,7 +58,7 @@ const AllDoctors = () => {
                         className="text-color"
                         sx={{ fontWeight: "700" }}
                       >
-                        শিশু নিউরোলজি বিশেষজ্ঞ
+                        {doctor?.expert}
                       </Typography>
                       <Typography
                         gutterBottom
@@ -63,7 +67,7 @@ const AllDoctors = () => {
                         className=""
                         sx={{ fontWeight: "900", fontSize: "1.3rem" }}
                       >
-                        অধ্যাপক ডাঃ সেলিনা হুসনা বানু
+                        {doctor?.doctorName}
                       </Typography>
                       <Typography
                         variant="p"
@@ -71,19 +75,19 @@ const AllDoctors = () => {
                         color="text.primary"
                         sx={{ fontSize: ".7rem", fontWeight: "600" }}
                       >
-                        এমবিবিএস, ডি.সি.এইচ, পি.এইচ.ডি (ইউ.সি.এল )
+                        {doctor?.degree}
                       </Typography>
                       <Typography
                         variant="p"
                         component="p"
                         color="text.primary"
                         sx={{
-                          fontSize: ".8rem",
+                          fontSize: "1.2rem",
                           fontWeight: "600",
                           marginTop: "1rem",
                         }}
                       >
-                        অধ্যাপক ও বিভাগীয়
+                        {doctor?.currentposition}
                       </Typography>
                       <Typography
                         variant="p"
@@ -95,7 +99,7 @@ const AllDoctors = () => {
                           marginTop: ".3rem",
                         }}
                       >
-                        ডিপার্টমেন্ট অফ নিউরোলজি এন্ড ডেভেলপমেন্ট
+                        {doctor?.depertmentName}
                       </Typography>
                       <Typography
                         variant="p"
@@ -107,14 +111,17 @@ const AllDoctors = () => {
                           marginTop: ".3rem",
                         }}
                       >
-                        ডাঃ এম আর খান শিশু হাসপাতাল এন্ড ইনস্টিটিউট অফ চাইল্ড
-                        হেলথ
+                        {doctor?.hospitalName}
                       </Typography>
                       <Button
                         variant="contained"
-                        sx={{ width: "100%", marginTop: "20px" }}
+                        sx={{
+                          width: "100%",
+                          marginTop: "20px",
+                          fontSize: "1.2rem",
+                        }}
                         size="large"
-                        onClick={handleOpen}
+                        onClick={() => handleOpen(doctor)}
                         className="bg-black"
                       >
                         অ্যাপয়েন্টমেন্ট করুন
@@ -127,7 +134,11 @@ const AllDoctors = () => {
           ))}
         </Grid>
       </Box>
-      <AppoimnetModals setOpen={setOpen} open={open}></AppoimnetModals>
+      <AppoimnetModals
+        modalDoctor={modalDoctor}
+        setOpen={setOpen}
+        open={open}
+      ></AppoimnetModals>
     </Container>
   );
 };

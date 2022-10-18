@@ -2,12 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-};
-
-// module.exports = nextConfig
-
-module.exports = {
   images: {
-    domains: ["dhakadoctor-sg.s3.amazonaws.com"],
+    domains: ["dhakadoctor-sg.s3.amazonaws.com", "i.ibb.co"],
   },
 };
+
+module.exports = nextConfig;

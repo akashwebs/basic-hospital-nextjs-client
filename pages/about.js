@@ -3,15 +3,22 @@ import Heading from "../Components/Heading";
 import Image from "next/image";
 import AboutUs from "../Components/AboutUs";
 import OurTeams from "../Components/OurTeams";
+import { useQuery } from "@tanstack/react-query";
+import { aboutEmployee } from "../lib/helper";
 
 const about = () => {
+  const { data: employees, isLoading: employeesLoading } = useQuery(
+    ["about-employees"],
+    aboutEmployee
+  );
+
   return (
-    <Box bgcolor={"#83c4ff"} color={"#000"}>
+    <Box bgcolor={"#5db2ff"} color={"#000"}>
       <Heading>আমাদের সম্পর্কে</Heading>
 
       {/* about us compoments  */}
       <AboutUs></AboutUs>
-      <OurTeams></OurTeams>
+      <OurTeams employees={employees}></OurTeams>
     </Box>
   );
 };

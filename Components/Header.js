@@ -1,5 +1,4 @@
 import { Container } from "@mui/material";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
@@ -8,9 +7,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // import "../styles/Header.css";
-
 import { Autoplay, EffectCreative, Pagination } from "swiper";
-const Header = () => {
+import { banners } from "../lib/helper";
+
+export default function Header({ banners }) {
   return (
     <Swiper
       spaceBetween={30}
@@ -34,20 +34,13 @@ const Header = () => {
       modules={[Autoplay, EffectCreative, Pagination]}
       className="mySwiper"
     >
-      <SwiperSlide>
-        <img src="./cover1.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="./cover1.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="./cover1.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="./cover1.jpg" />
-      </SwiperSlide>
+      {banners?.map((slider) => (
+        <SwiperSlide>
+          <img
+            src={slider?.bannerImage ? slider?.bannerImage : slider?.extraUrl}
+          />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
-};
-
-export default Header;
+}

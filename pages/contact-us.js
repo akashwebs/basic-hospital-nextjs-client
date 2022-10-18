@@ -87,7 +87,7 @@ const contact = () => {
                   <Image
                     src="/hospital-image.jpg"
                     width={400}
-                    height={400}
+                    height={450}
                   ></Image>
                 </Box>
               </Paper>

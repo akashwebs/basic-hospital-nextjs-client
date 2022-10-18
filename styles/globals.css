@@ -2,12 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "lal";
+  src: url("/lalsobuj.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Akhand";
+  src: local("Akhand"), url("/lalsobuj.ttf") format("truetype");
+  font-weight: normal;
+}
+
 html,
-body {
+* {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: lal, Akhand !important;
 }
 
 a {
@@ -115,19 +127,17 @@ a {
   padding: 20px 0 20px;
   margin: 0 auto;
 }
-.model.open svg{
+.model.open svg {
   position: fixed;
-  top:10px;
+  top: 10px;
   right: 10px;
   width: 2rem;
   height: 2rem;
   padding: 5px;
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
   cursor: pointer;
-
 }
-
 
 @media (prefers-color-scheme: dark) {
   html {

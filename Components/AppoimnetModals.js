@@ -21,7 +21,7 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-const AppoimnetModals = ({ open, setOpen }) => {
+const AppoimnetModals = ({ open, setOpen, modalDoctor: doctor }) => {
   const handleClose = () => setOpen(false);
 
   const Item = styled(Paper)(({ theme }) => ({
@@ -47,6 +47,19 @@ const AppoimnetModals = ({ open, setOpen }) => {
     >
       <Fade in={open}>
         <Box sx={style}>
+          <button
+            style={{
+              position: "absolute",
+              top: "10px",
+              right: "25px",
+              width: "25px",
+              height: "25px",
+              cursor: "pointer",
+            }}
+            onClick={() => setOpen(false)}
+          >
+            X
+          </button>
           <Divider
             id="transition-modal-title"
             className="text-color"
@@ -63,7 +76,7 @@ const AppoimnetModals = ({ open, setOpen }) => {
             <Grid item xs={2} sm={4} md={4} sx={{ height: "100%" }}>
               <Item variant="none">
                 <Image
-                  src="https://dhakadoctor-sg.s3.amazonaws.com/media/doctor_profile/Dr._Selina_Husna_Banu.jpg"
+                  src={doctor?.img}
                   alt="Picture of the author"
                   width={344}
                   height={239}
@@ -73,7 +86,7 @@ const AppoimnetModals = ({ open, setOpen }) => {
                   component={"h6"}
                   sx={{ color: "#000", fontSize: { xs: "1rem", sm: "1.5rem" } }}
                 >
-                  শিশু নিউরোলজি বিশেষজ্ঞ
+                  {doctor?.depertmentName}
                 </Typography>
               </Item>
             </Grid>
@@ -89,14 +102,14 @@ const AppoimnetModals = ({ open, setOpen }) => {
                       marginTop: "15px",
                     }}
                   >
-                    ​ডাঃ শেখ মারুফুজ্জামান
+                    {doctor?.doctorName}
                   </Typography>
                   <Typography
                     variant="p"
                     component={"p"}
                     sx={{ color: "#000", fontSize: ".9rem", marginTop: "5px" }}
                   >
-                    এমবিবিএস, এমডি (কার্ডিওলজি)
+                    {doctor?.degree}
                   </Typography>
                   <Typography
                     variant="p"
@@ -107,7 +120,7 @@ const AppoimnetModals = ({ open, setOpen }) => {
                       fontSize: { xs: "1rem", sm: "1.3rem" },
                     }}
                   >
-                    রোগী দেখেনঃ <br /> শনিবার - বৃহস্পতিবার
+                    রোগী দেখেনঃ <br /> {doctor?.seeDays}
                   </Typography>
                   <Typography
                     variant="p"
@@ -118,7 +131,7 @@ const AppoimnetModals = ({ open, setOpen }) => {
                       fontSize: { xs: "1rem", sm: "1.3rem" },
                     }}
                   >
-                    দুপুর ৩টা - রাত ৮টা
+                    {doctor?.seeTimes}
                   </Typography>
                   <Typography
                     variant="p"
@@ -130,7 +143,7 @@ const AppoimnetModals = ({ open, setOpen }) => {
                       fontWeight: "bold",
                     }}
                   >
-                    সিরিয়ােলর জন্যঃ<br></br> 01818 410 710
+                    সিরিয়ােলর জন্যঃ<br></br> {doctor?.serialNumber}
                   </Typography>
                   <Typography
                     variant="p"
@@ -141,7 +154,7 @@ const AppoimnetModals = ({ open, setOpen }) => {
                       fontSize: { xs: "1rem", sm: "1.3rem" },
                     }}
                   >
-                    রুম নাম্বারঃ ২০২
+                    রুম নাম্বারঃ {doctor?.roomNumber}
                   </Typography>
                 </div>
               </Item>
