@@ -11,9 +11,11 @@ export const getStaticProps = async () => {
 const Blogs = ({ data }) => {
   return (
     <div>
-      {data?.map((curr) => (
+      {data?.map((curr, index) => (
         <div>
-          <Link href={`/Blogs/${curr.id}`}>{curr.title}</Link>
+          <Link key={index} href={`/Blogs/${curr.id}`}>
+            {curr.title}
+          </Link>
         </div>
       ))}
     </div>
