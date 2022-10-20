@@ -12,10 +12,8 @@ const Blogs = ({ data }) => {
   return (
     <div>
       {data?.map((curr, index) => (
-        <div>
-          <Link key={index} href={`/Blogs/${curr.id}`}>
-            {curr.title}
-          </Link>
+        <div key={index}>
+          <Link href={`/Blogs/${curr.id}`}>{curr.title}</Link>
         </div>
       ))}
     </div>
