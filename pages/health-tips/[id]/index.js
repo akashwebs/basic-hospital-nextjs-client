@@ -13,7 +13,9 @@ import { red } from "@mui/material/colors";
 export async function getServerSideProps(context) {
   // Fetch data from external API
   const id = context.params.id;
-  const res = await fetch(`http://localhost:5000/single-page-post/` + id);
+  const res = await fetch(
+    `https://basic-hospital-server.vercel.app/single-page-post/` + id
+  );
   const data = await res.json();
 
   // Pass data to the page via props
