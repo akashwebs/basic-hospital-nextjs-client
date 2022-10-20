@@ -18,7 +18,10 @@ const about = () => {
 
       {/* about us compoments  */}
       <AboutUs></AboutUs>
-      <OurTeams employees={employees}></OurTeams>
+      <OurTeams
+        employees={employees}
+        employeesLoading={employeesLoading}
+      ></OurTeams>
     </Box>
   );
 };

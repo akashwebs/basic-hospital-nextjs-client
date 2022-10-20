@@ -19,10 +19,13 @@ export default function Home() {
   console.log("form query", data);
   return (
     <div>
-      <Header banners={data}></Header>
+      <Header banners={data} isLoading={isLoading}></Header>
       <OurServices></OurServices>
       <AboutUs></AboutUs>
-      <AllDoctors doctors={doctors}></AllDoctors>
+      <AllDoctors
+        doctors={doctors}
+        doctorsLoading={doctorsLoading}
+      ></AllDoctors>
       <GoogleMap></GoogleMap>
     </div>
   );

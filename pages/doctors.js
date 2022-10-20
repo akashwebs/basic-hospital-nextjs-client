@@ -10,7 +10,10 @@ const doctors = () => {
 
   return (
     <div>
-      <AllDoctors doctors={doctors}></AllDoctors>
+      <AllDoctors
+        doctors={doctors}
+        doctorsLoading={doctorsLoading}
+      ></AllDoctors>
     </div>
   );
 };

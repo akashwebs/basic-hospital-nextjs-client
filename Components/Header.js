@@ -9,8 +9,12 @@ import "swiper/css/pagination";
 // import "../styles/Header.css";
 import { Autoplay, EffectCreative, Pagination } from "swiper";
 import { banners } from "../lib/helper";
+import Loading from "./Loading";
 
-export default function Header({ banners }) {
+export default function Header({ banners, isLoading }) {
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
   return (
     <Swiper
       spaceBetween={30}

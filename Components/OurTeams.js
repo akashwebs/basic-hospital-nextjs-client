@@ -1,12 +1,15 @@
-import { Grid} from "@mui/material";
+import { Grid } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React from "react";
 import Heading from "./Heading";
+import Loading from "./Loading";
 
 import Team from "./Team";
 
-const OurTeams = ({ employees }) => {
-  console.log("from employees", employees);
+const OurTeams = ({ employees, employeesLoading }) => {
+  if (employeesLoading) {
+    return <Loading></Loading>;
+  }
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
       <Heading> পরিচালকগন</Heading>
