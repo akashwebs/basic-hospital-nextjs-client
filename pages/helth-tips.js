@@ -7,7 +7,7 @@ import Loading from "../Components/Loading";
 
 import { healthTips } from "../lib/helper";
 
-const helth = () => {
+const Helth = () => {
   const { data: healths, isLoading } = useQuery(["health-tips"], healthTips);
 
   return (
@@ -31,4 +31,4 @@ const helth = () => {
   );
 };
 
-export default helth;
+export default Helth;

@@ -8,16 +8,16 @@ export const getStaticProps = async () => {
   return { props: { data } };
 };
 
-const blogs = ({ data }) => {
+const Blogs = ({ data }) => {
   return (
     <div>
       {data?.map((curr) => (
         <div>
-          <Link href={`/blogs/${curr.id}`}>{curr.title}</Link>
+          <Link href={`/Blogs/${curr.id}`}>{curr.title}</Link>
         </div>
       ))}
     </div>
   );
 };
 
-export default blogs;
+export default Blogs;

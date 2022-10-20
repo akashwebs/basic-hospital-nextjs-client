@@ -16,7 +16,7 @@ import EditLocationAltIcon from "@mui/icons-material/EditLocationAlt";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 import emailjs from "@emailjs/browser";
 
-const contact = () => {
+const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -254,4 +254,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

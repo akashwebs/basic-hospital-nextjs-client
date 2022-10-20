@@ -6,7 +6,7 @@ import OurTeams from "../Components/OurTeams";
 import { useQuery } from "@tanstack/react-query";
 import { aboutEmployee } from "../lib/helper";
 
-const about = () => {
+const About = () => {
   const { data: employees, isLoading: employeesLoading } = useQuery(
     ["about-employees"],
     aboutEmployee
@@ -26,4 +26,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

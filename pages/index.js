@@ -16,7 +16,6 @@ export default function Home() {
     allDoctors
   );
 
-  console.log("form query", data);
   return (
     <div>
       <Header banners={data} isLoading={isLoading}></Header>

@@ -6,7 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 import { gallaryImages } from "../lib/helper";
 import Loading from "../Components/Loading";
 
-const imagegallary = () => {
+const Imagegallary = () => {
   const { data: images, isLoading: imagesLoading } = useQuery(
     ["about-employees"],
     gallaryImages
@@ -28,4 +28,4 @@ const imagegallary = () => {
   );
 };
 
-export default imagegallary;
+export default Imagegallary;

@@ -2,7 +2,7 @@ import React from "react";
 import AllDoctors from "../Components/AllDoctors";
 import { allDoctors } from "../lib/helper";
 import { useQuery } from "@tanstack/react-query";
-const doctors = () => {
+const Doctors = () => {
   const { data: doctors, isLoading: doctorsLoading } = useQuery(
     ["doctors"],
     allDoctors
@@ -18,4 +18,4 @@ const doctors = () => {
   );
 };
 
-export default doctors;
+export default Doctors;

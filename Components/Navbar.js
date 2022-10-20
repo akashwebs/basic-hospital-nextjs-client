@@ -130,9 +130,8 @@ const Navbar = () => {
             }}
           >
             {pages.map((page) => (
-              <Link href={`/${page.route}`}>
+              <Link href={`/${page.route}`} key={page.name}>
                 <Button
-                  key={page.name}
                   variant="contained"
                   onClick={handleCloseNavMenu}
                   sx={{

@@ -39,7 +39,7 @@ export default function Header({ banners, isLoading }) {
       className="mySwiper"
     >
       {banners?.map((slider) => (
-        <SwiperSlide>
+        <SwiperSlide key={slider?._id}>
           <img
             src={slider?.bannerImage ? slider?.bannerImage : slider?.extraUrl}
           />
