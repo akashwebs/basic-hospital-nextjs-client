@@ -31,7 +31,7 @@ const Contact = () => {
       .then(
         (result) => {
           if (result.text === "OK") {
-            return <Alert severity="success">This is a success message!</Alert>;
+            alert("Message successfully send");
           }
         },
         (error) => {

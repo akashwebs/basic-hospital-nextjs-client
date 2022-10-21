@@ -214,6 +214,7 @@ a {
 }
 .loader--text:after {
   content: "Loading";
+  color: #fff;
   font-weight: bold;
   animation-name: loading-text;
   animation-duration: 3s;
