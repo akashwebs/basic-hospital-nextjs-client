@@ -51,7 +51,7 @@ const AboutUs = ({ color }) => {
         <Grid item xs={12} sm={6}>
           <Typography
             variant="h6"
-            color="#1b2430"
+            color={color ? color : "#111"}
             gutterBottom
             sx={{ fontSize: { xs: "20px", md: "35px" }, fontWeight: "bold" }}
           >
@@ -61,7 +61,7 @@ const AboutUs = ({ color }) => {
             style={{
               height: "2px",
               width: "20%",
-              background: "#1b2430",
+              background: color ? color : "#111",
               marginTop: { xs: "15px", sm: "-15px" },
               marginBottom: "15px",
             }}
@@ -70,7 +70,7 @@ const AboutUs = ({ color }) => {
             <Typography
               variant="p"
               component={"p"}
-              color={"#1b2430"}
+              color={color ? color : "#111"}
               textAlign={"justify"}
               fontSize={18}
             >
