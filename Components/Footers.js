@@ -4,16 +4,31 @@ import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import Container from "@mui/material/Container";
 import Image from "next/image";
+import { Box } from "@mui/system";
 
 function Copyright(props) {
   return (
-    <Typography variant="body2" color="#fff" align="center" {...props}>
-      {"Copyright © "}
-      <Link color="inherit" href="#">
-        Basic Aid Hosital
-      </Link>
-      {new Date().getFullYear()}
-    </Typography>
+    <Box>
+      <Typography variant="body2" color="#fff" align="center" {...props}>
+        {"Copyright © "}
+        <Link color="inherit" href="#">
+          Basic Aid Hosital
+        </Link>{" "}
+        {new Date().getFullYear()}
+      </Typography>
+      <Typography
+        variant="p"
+        color="#fff"
+        sx={{ fontSize: ".8rem" }}
+        component={"p"}
+        textAlign={"center"}
+      >
+        Developed by{" "}
+        <Link color="inherit" href="#" target={"_blank"}>
+          Akash Shil
+        </Link>
+      </Typography>
+    </Box>
   );
 }
 
@@ -101,10 +116,10 @@ const Footers = () => {
             </li>
             <li>
               <div>
-                <Typography variant="p" component={"p"}>
+                <Typography variant="p" component={"p"} color="#fff">
                   ফায়ার সার্ভিস(কচুয়া)
                 </Typography>
-                <Typography variant="p" component={"p"}>
+                <Typography variant="p" component={"p"} color="#fff">
                   01716-xxxxxxx
                 </Typography>
               </div>
@@ -117,7 +132,7 @@ const Footers = () => {
           </Typography>
           <ul>
             <li>
-              <div variant="subtitle1" color="#EDEDED">
+              <div variant="subtitle1" color="#fff">
                 <Typography variant="p" component={"p"}>
                   যোকোন প্রয়োজনে
                 </Typography>
@@ -127,7 +142,7 @@ const Footers = () => {
               </div>
             </li>
             <li>
-              <div variant="subtitle1" color="#EDEDED">
+              <div variant="subtitle1" color="#fff">
                 <Typography variant="p" component={"p"}>
                   ডাক্তারের সিরিয়ালের জন্য
                 </Typography>
@@ -142,6 +157,7 @@ const Footers = () => {
             variant="p"
             component={"p"}
             sx={{ py: 1, fontSize: "16px" }}
+            color={"#fff"}
           >
             Follow Us
           </Typography>

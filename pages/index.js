@@ -16,11 +16,13 @@ export default function Home() {
     allDoctors
   );
 
+  const color='#fff'
+
   return (
     <div>
       <Header banners={data} isLoading={isLoading}></Header>
       <OurServices></OurServices>
-      <AboutUs></AboutUs>
+      <AboutUs color={color}></AboutUs>
       <AllDoctors
         doctors={doctors}
         doctorsLoading={doctorsLoading}

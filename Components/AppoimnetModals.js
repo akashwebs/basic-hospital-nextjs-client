@@ -10,7 +10,7 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Image from "next/image";
-
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 const style = {
   position: "absolute",
   top: "50%",
@@ -22,7 +22,12 @@ const style = {
   p: 4,
 };
 const AppoimnetModals = ({ open, setOpen, modalDoctor: doctor }) => {
+  const [copyText, setCopyText] = React.useState(null);
   const handleClose = () => setOpen(false);
+
+  React.useEffect(() => {
+    setCopyText(null);
+  }, [doctor]);
 
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -31,6 +36,13 @@ const AppoimnetModals = ({ open, setOpen, modalDoctor: doctor }) => {
     textAlign: "center",
     color: theme.palette.text.secondary,
   }));
+
+  const textCopy = (data) => {
+    const a = navigator.clipboard.writeText(data);
+    if (a) {
+      setCopyText("copied");
+    }
+  };
 
   return (
     <Modal
@@ -143,7 +155,22 @@ const AppoimnetModals = ({ open, setOpen, modalDoctor: doctor }) => {
                       fontWeight: "bold",
                     }}
                   >
-                    সিরিয়ােলর জন্যঃ<br></br> {doctor?.serialNumber}
+                    সিরিয়ােলর জন্যঃ<br></br>{" "}
+                    <span onClick={() => textCopy(doctor?.serialNumber)}>
+                      {doctor?.serialNumber}{" "}
+                      <span style={{ cursor: "pointer" }}>
+                        <ContentCopyIcon fontSize="12" />
+                      </span>
+                      <p
+                        style={{
+                          color: "green",
+                          marginLeft: "15px",
+                          fontSize: ".8rem",
+                        }}
+                      >
+                        {copyText}
+                      </p>
+                    </span>
                   </Typography>
                   <Typography
                     variant="p"

@@ -31,7 +31,7 @@ const Sinlge = ({ health }) => {
             <Typography
               variant="h5"
               component={"h5"}
-              sx={{ fontSize: { xs: "1.5rem", md: "2rem" } }}
+              sx={{ fontSize: { xs: "1.5rem", md: "2rem" }, color: "#fff" }}
             >
               {health.title}
             </Typography>

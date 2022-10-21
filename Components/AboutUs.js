@@ -11,7 +11,7 @@ import Heading from "./Heading";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-const AboutUs = () => {
+const AboutUs = ({ color }) => {
   return (
     <Container
       maxWidth="lg"
@@ -37,11 +37,11 @@ const AboutUs = () => {
                   gutterBottom
                   variant="h5"
                   component="h5"
-                  color="#111"
+                  color={color ? color : "#111"}
                 >
                   Dr. Abdul Kader
                 </Typography>
-                <Typography variant="body2" color="#222">
+                <Typography variant="body2" color={color ? color : "#111"}>
                   Chairman of Basic Aid Hosptial
                 </Typography>
               </CardContent>
