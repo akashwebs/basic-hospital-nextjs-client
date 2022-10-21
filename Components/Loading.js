@@ -2,18 +2,19 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div
-      style={{
-        height: "70vh",
-        textAlign: "center",
-        width: "100%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      loading....
-    </div>
+    <>
+      <div class="container-loading">
+        <div class="loader">
+          <div class="loader--dot"></div>
+          <div class="loader--dot"></div>
+          <div class="loader--dot"></div>
+          <div class="loader--dot"></div>
+          <div class="loader--dot"></div>
+          <div class="loader--dot"></div>
+          <div class="loader--text"></div>
+        </div>
+      </div>
+    </>
   );
 };
 

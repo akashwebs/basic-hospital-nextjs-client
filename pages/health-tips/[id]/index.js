@@ -62,6 +62,7 @@ const Sinlge = ({ health }) => {
             <div
               className="my-8 activity-sigle-post"
               id="solaiman-font"
+              style={{ color: "#fff" }}
               dangerouslySetInnerHTML={{ __html: health?.content }}
             />
           </Box>

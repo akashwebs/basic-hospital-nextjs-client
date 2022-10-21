@@ -50,7 +50,7 @@ const Footers = () => {
           </Typography>
           <Image src={"/logo.png"} width={100} height={100}></Image>
           <>
-            <Typography variant="p" component={"p"} color={"#EDEDED"}>
+            <Typography variant="p" component={"p"} color={"#fff"}>
               মানবসেবাই আমাদের ধর্ম মানবসেবাই আমাদের ধর্ম মানবসেবাই আমাদের ধর্ম
               মানবসেবাই আমাদের ধর্ম মানবসেবাই আমাদের ধর্ম মানবসেবাই আমাদের ধর্ম
               মানবসেবাই আমাদের ধর্ম
@@ -61,29 +61,29 @@ const Footers = () => {
           <Typography variant="h6" color="#fff" gutterBottom>
             আমাদের সেবা সমূহ
           </Typography>
-          <ul>
+          <ul style={{ color: "#fff" }}>
             <li>
-              <Link href="#" variant="subtitle1" color="#EDEDED">
+              <Link href="#" variant="subtitle1" color="">
                 জরুরি বিভাগ
               </Link>
             </li>
             <li>
-              <Link href="#" variant="subtitle1" color="#EDEDED">
+              <Link href="#" variant="subtitle1" color="">
                 ডেন্টাল
               </Link>
             </li>
             <li>
-              <Link href="#" variant="subtitle1" color="#EDEDED">
+              <Link href="#" variant="subtitle1" color="">
                 ডায়াগনিস্টিক সেন্টার
               </Link>
             </li>
             <li>
-              <Link href="#" variant="subtitle1" color="#EDEDED">
+              <Link href="#" variant="subtitle1" color="">
                 মা ও শিশু রোগ বিশেষজ্ঞ
               </Link>
             </li>
             <li>
-              <Link href="#" variant="subtitle1" color="#EDEDED">
+              <Link href="#" variant="subtitle1" color="">
                 অ্যাম্বুলেন্স সার্ভিস
               </Link>
             </li>
@@ -95,7 +95,7 @@ const Footers = () => {
           </Typography>
           <ul>
             <li>
-              <div>
+              <div style={{ color: "#fff" }}>
                 <Typography variant="p" component={"p"}>
                   অ্যাম্বুলেন্স সার্ভিস
                 </Typography>
@@ -105,7 +105,7 @@ const Footers = () => {
               </div>
             </li>
             <li>
-              <div>
+              <div style={{ color: "#fff" }}>
                 <Typography variant="p" component={"p"}>
                   পুলিশ(কচুয়া)
                 </Typography>
@@ -132,7 +132,7 @@ const Footers = () => {
           </Typography>
           <ul>
             <li>
-              <div variant="subtitle1" color="#fff">
+              <div variant="subtitle1" style={{ color: "#fff" }}>
                 <Typography variant="p" component={"p"}>
                   যোকোন প্রয়োজনে
                 </Typography>
@@ -142,7 +142,7 @@ const Footers = () => {
               </div>
             </li>
             <li>
-              <div variant="subtitle1" color="#fff">
+              <div style={{ color: "#fff" }}>
                 <Typography variant="p" component={"p"}>
                   ডাক্তারের সিরিয়ালের জন্য
                 </Typography>

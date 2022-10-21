@@ -56,6 +56,7 @@ const Navbar = () => {
                 color: "inherit",
                 textDecoration: "none",
                 py: 2,
+                fontSize: "1.5rem",
               }}
             >
               <Image src="/logo.png" width={70} height={70} />
@@ -115,7 +116,7 @@ const Navbar = () => {
               fontWeight: 700,
               color: "inherit",
               textDecoration: "none",
-              fontSize: "12px",
+              fontSize: "1.5rem",
               alignItems: "center",
             }}
           >
