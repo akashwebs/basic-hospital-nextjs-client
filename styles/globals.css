@@ -147,6 +147,10 @@ a {
 .helthTiitle .MuiCardHeader-title {
   color: #fff !important;
 }
+.footer-our-services li a {
+  color: #fff;
+  text-decoration: none;
+}
 /* -------loading ------------------------------------------- */
 .container-loading {
   height: 800vh;

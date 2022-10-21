@@ -11,7 +11,7 @@ function Copyright(props) {
     <Box>
       <Typography variant="body2" color="#fff" align="center" {...props}>
         {"Copyright © "}
-        <Link color="inherit" href="#">
+        <Link color="#fff" href="#">
           Basic Aid Hosital
         </Link>{" "}
         {new Date().getFullYear()}
@@ -24,7 +24,7 @@ function Copyright(props) {
         textAlign={"center"}
       >
         Developed by{" "}
-        <Link color="inherit" href="#" target={"_blank"}>
+        <Link color="#fff" href="#" target={"_blank"}>
           Akash Shil
         </Link>
       </Typography>
@@ -61,29 +61,29 @@ const Footers = () => {
           <Typography variant="h6" color="#fff" gutterBottom>
             আমাদের সেবা সমূহ
           </Typography>
-          <ul style={{ color: "#fff" }}>
+          <ul className="footer-our-services">
             <li>
-              <Link href="#" variant="subtitle1" color="">
+              <Link href="#" variant="subtitle1">
                 জরুরি বিভাগ
               </Link>
             </li>
             <li>
-              <Link href="#" variant="subtitle1" color="">
+              <Link href="#" variant="subtitle1">
                 ডেন্টাল
               </Link>
             </li>
             <li>
-              <Link href="#" variant="subtitle1" color="">
+              <Link href="#" variant="subtitle1">
                 ডায়াগনিস্টিক সেন্টার
               </Link>
             </li>
             <li>
-              <Link href="#" variant="subtitle1" color="">
+              <Link href="#" variant="subtitle1">
                 মা ও শিশু রোগ বিশেষজ্ঞ
               </Link>
             </li>
             <li>
-              <Link href="#" variant="subtitle1" color="">
+              <Link href="#" variant="subtitle1">
                 অ্যাম্বুলেন্স সার্ভিস
               </Link>
             </li>
