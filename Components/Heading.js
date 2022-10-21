@@ -1,12 +1,12 @@
 import { Divider, Typography } from "@mui/material";
 import React from "react";
 
-const Heading = ({ children }) => {
+const Heading = ({ children, color }) => {
   return (
     <Divider>
       <Typography
         variant="h6"
-        color="#fff"
+        color={color ? color : "#fff"}
         gutterBottom
         sx={{
           fontSize: { xs: "20px", md: "35px" },
@@ -20,7 +20,7 @@ const Heading = ({ children }) => {
         style={{
           height: "2px",
           width: "45%",
-          background: "#fff",
+          background: color ? color : "#fff",
           marginTop: "-15px",
           marginBottom: "20px",
         }}

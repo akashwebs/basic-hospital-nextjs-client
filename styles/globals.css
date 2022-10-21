@@ -21,6 +21,10 @@ html,
   margin: 0;
   font-family: lal, Akhand !important;
 }
+body {
+  color: #1b2430;
+  background: #1b2430;
+}
 
 a {
   color: inherit;
@@ -181,5 +185,8 @@ a {
     -moz-column-width: 100%;
     column-width: 100%;
     padding: 0 12px;
+  }
+  #modal-in-mobile-size {
+    width: 95% !important;
   }
 }

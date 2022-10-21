@@ -11,10 +11,13 @@ const About = () => {
     ["about-employees"],
     aboutEmployee
   );
+  const color = "#1b2430";
 
   return (
     <Box bgcolor={"#5db2ff"} color={"#000"}>
-      <Heading>আমাদের সম্পর্কে</Heading>
+      <Heading color={color}>
+        <span style={{ color: "#1b2430" }}>আমাদের সম্পর্কে</span>
+      </Heading>
 
       {/* about us compoments  */}
       <AboutUs></AboutUs>

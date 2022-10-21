@@ -46,7 +46,7 @@ const AppoimnetModals = ({ open, setOpen, modalDoctor: doctor }) => {
       sx={{ overflow: "scroll" }}
     >
       <Fade in={open}>
-        <Box sx={style}>
+        <Box sx={style} id="modal-in-mobile-size">
           <button
             style={{
               position: "absolute",

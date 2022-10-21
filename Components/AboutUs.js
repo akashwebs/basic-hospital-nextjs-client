@@ -37,11 +37,11 @@ const AboutUs = () => {
                   gutterBottom
                   variant="h5"
                   component="h5"
-                  color="#fff"
+                  color="#111"
                 >
                   Dr. Abdul Kader
                 </Typography>
-                <Typography variant="body2" color="#fff">
+                <Typography variant="body2" color="#222">
                   Chairman of Basic Aid Hosptial
                 </Typography>
               </CardContent>
@@ -51,7 +51,7 @@ const AboutUs = () => {
         <Grid item xs={12} sm={6}>
           <Typography
             variant="h6"
-            color="#fff"
+            color="#1b2430"
             gutterBottom
             sx={{ fontSize: { xs: "20px", md: "35px" }, fontWeight: "bold" }}
           >
@@ -61,7 +61,7 @@ const AboutUs = () => {
             style={{
               height: "2px",
               width: "20%",
-              background: "#fff",
+              background: "#1b2430",
               marginTop: { xs: "15px", sm: "-15px" },
               marginBottom: "15px",
             }}
@@ -70,7 +70,7 @@ const AboutUs = () => {
             <Typography
               variant="p"
               component={"p"}
-              color={"#EDEDED"}
+              color={"#1b2430"}
               textAlign={"justify"}
               fontSize={18}
             >
