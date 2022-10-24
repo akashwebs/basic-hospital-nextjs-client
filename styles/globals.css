@@ -153,9 +153,11 @@ a {
 }
 /* -------loading ------------------------------------------- */
 .container-loading {
-  height: 800vh;
-  width: 100vw;
+  height: 80vh;
+  width: 100%;
   font-family: Helvetica;
+  background-color: #000000;
+  position: relative;
 }
 
 .loader {
@@ -291,5 +293,8 @@ a {
   }
   #modal-in-mobile-size {
     width: 95% !important;
+  }
+  .container-loading {
+    height: 40vh;
   }
 }

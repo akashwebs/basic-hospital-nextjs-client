@@ -16,7 +16,7 @@ export default function Home() {
     allDoctors
   );
 
-  const color='#fff'
+  const color = "#fff";
 
   return (
     <div>

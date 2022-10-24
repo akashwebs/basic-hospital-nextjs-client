@@ -41,12 +41,11 @@ const Navbar = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
-          <div>
+          <Link href={"/"}>
             <Typography
               variant="h6"
               noWrap
-              component="a"
-              href="/"
+              component="h6"
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
@@ -57,13 +56,14 @@ const Navbar = () => {
                 textDecoration: "none",
                 py: 2,
                 fontSize: "1.5rem",
+                cursor: "pointer",
               }}
             >
               <Image src="/logo.png" width={70} height={70} />
               {/* ----------logo------------------ */}
               বেসিক এইড এন্ড হসপিটাল
             </Typography>
-          </div>
+          </Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -103,27 +103,29 @@ const Navbar = () => {
               ))}
             </Menu>
           </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              color: "inherit",
-              textDecoration: "none",
-              fontSize: "1.5rem",
-              alignItems: "center",
-            }}
-          >
-            <Image src="/logo.png" width={35} height={35} />
-            {/* ----------logo------------------ */}
-            বেসিক এইড এন্ড হসপিটাল
-          </Typography>
+          <Link href={"/"}>
+            <Typography
+              variant="h5"
+              noWrap
+              component="h5"
+              sx={{
+                mr: 2,
+                display: { xs: "flex", md: "none" },
+                flexGrow: 1,
+                fontFamily: "monospace",
+                fontWeight: 700,
+                color: "inherit",
+                textDecoration: "none",
+                fontSize: "1.5rem",
+                alignItems: "center",
+                cursor: "pointer",
+              }}
+            >
+              <Image src="/logo.png" width={35} height={35} />
+              {/* ----------logo------------------ */}
+              বেসিক এইড এন্ড হসপিটাল
+            </Typography>
+          </Link>
           <Box
             sx={{
               flexGrow: 1,
