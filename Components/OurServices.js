@@ -12,7 +12,9 @@ const OurServices = () => {
         <Grid container>
           <Grid item xs={12} sm={4}>
             <Box pt={4}>
-              <LocalPharmacyIcon sx={{ fontSize: "50px" }} />
+              <Box sx={{ display: { sm: "none", md: "block" } }}>
+                <LocalPharmacyIcon sx={{ fontSize: "50px" }} />
+              </Box>
               <Typography
                 variant="h5"
                 component={"h5"}
