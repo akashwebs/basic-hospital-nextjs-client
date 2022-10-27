@@ -58,7 +58,6 @@ const Departments = () => {
   ];
   let searchQuery = "all";
 
-
   return (
     <Paper
       component="form"
@@ -76,7 +75,6 @@ const Departments = () => {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={department}
           label="Select Department"
           onChange={(e) => setDepartment(e.target.value)}
           className=""

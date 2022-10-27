@@ -1,17 +1,26 @@
+import { useQuery } from "@tanstack/react-query";
 import AllDoctors from "../../Components/AllDoctors";
+import { allDoctors } from "../../lib/helper";
 
 export async function getServerSideProps(context) {
   const department = context.params.depName;
-  const res = await fetch(
-    `https://basic-hospital-server.vercel.app/search-department/` + department
-  );
-  const data = await res.json();
 
-  // Pass data to the page via props
-  return { props: { data } };
+  return { props: { department } };
 }
-const SearchName = ({ data }) => {
-  return <AllDoctors doctors={data}></AllDoctors>;
+const SearchName = ({ department }) => {
+  const { data } = useQuery([department], allDoctors);
+
+  const arr = [];
+
+  const result = data?.map((cat) =>
+    cat?.department?.map((e) => {
+      if (e.depName == department) {
+        arr.push(cat);
+      }
+    })
+  );
+
+  return <AllDoctors doctors={arr}></AllDoctors>;
 };
 
 export default SearchName;
