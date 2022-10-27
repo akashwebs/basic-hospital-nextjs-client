@@ -1,13 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import AllDoctors from "../../Components/AllDoctors";
 import { allDoctors } from "../../lib/helper";
+import { useRouter } from "next/router";
 
-export async function getServerSideProps(context) {
-  const department = context.params.depName;
+const SearchName = () => {
+  const router = useRouter();
 
-  return { props: { department } };
-}
-const SearchName = ({ department }) => {
+  const department = router.query.depName;
+
   const { data } = useQuery([department], allDoctors);
 
   const arr = [];
