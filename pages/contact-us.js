@@ -30,6 +30,7 @@ const Contact = () => {
       )
       .then(
         (result) => {
+          console.log("error", result);
           if (result.text === "OK") {
             alert("Message successfully send");
           }

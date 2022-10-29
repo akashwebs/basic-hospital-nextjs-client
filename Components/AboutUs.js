@@ -7,10 +7,19 @@ import {
   Divider,
 } from "@mui/material";
 import React from "react";
-import Heading from "./Heading";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
+
+import "swiper/css";
+import "swiper/css/effect-creative";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+
+// import "../styles/Header.css";
+import { Autoplay, EffectCreative, Pagination } from "swiper";
+
 const AboutUs = ({ color }) => {
   return (
     <Container
@@ -24,29 +33,67 @@ const AboutUs = ({ color }) => {
       <Grid container spacing={4} justifyContent="space-evenly">
         <Grid item xs={12} sm={6}>
           {/* card imag  */}
-          <Card sx={{ maxWidth: 400 }} className="kader-gradiant">
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="auto"
-                image="/kader.jpg"
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="h5"
-                  color={color ? color : "#111"}
-                >
-                  Dr. Abdul Kader
-                </Typography>
-                <Typography variant="body2" color={color ? color : "#111"}>
-                  Chairman of Basic Aid Hosptial
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
+
+          <Swiper
+            spaceBetween={1}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            modules={[Autoplay]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <Card sx={{ maxWidth: 400 }} className="kader-gradiant">
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="auto"
+                    image="/kader.jpg"
+                    alt="green iguana"
+                  />
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="h5"
+                      color={color ? color : "#111"}
+                    >
+                      Dr. Abdul Kader
+                    </Typography>
+                    <Typography variant="body2" color={color ? color : "#111"}>
+                      Chairman of Basic Aid Hosptial
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Card sx={{ maxWidth: 400 }} className="kader-gradiant">
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="auto"
+                    image="/kader.jpg"
+                    alt="green iguana"
+                  />
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="h5"
+                      color={color ? color : "#111"}
+                    >
+                      Dr. Abdul Kader
+                    </Typography>
+                    <Typography variant="body2" color={color ? color : "#111"}>
+                      Chairman of Basic Aid Hosptial
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </SwiperSlide>
+          </Swiper>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Typography

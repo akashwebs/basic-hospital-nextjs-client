@@ -43,99 +43,105 @@ const AllDoctors = ({ doctors, doctorsLoading }) => {
             spacing={{ xs: 2, md: 3 }}
             columns={{ xs: 1, sm: 8, md: 16 }}
           >
-            {doctors?.map((doctor, index) => (
-              <Grid item xs={2} sm={4} md={4} key={index}>
-                <Item variant="div" component="div" sx={{ height: "100%" }}>
-                  <Card sx={{ maxWidth: 500, height: "100%" }}>
-                    <div style={{ height: "100%" }}>
-                      <CardMedia
-                        component="img"
-                        height="250"
-                        image={doctor?.img}
-                        alt="green iguana"
-                      />
-                      <CardContent>
-                        <Typography
-                          gutterBottom
-                          variant="p"
-                          component="p"
-                          className="text-color"
-                          sx={{ fontWeight: "700" }}
-                        >
-                          {doctor?.expert}
-                        </Typography>
-                        <Typography
-                          gutterBottom
-                          variant="h5"
-                          component="h5"
-                          className=""
-                          sx={{ fontWeight: "900", fontSize: "1.3rem" }}
-                        >
-                          {doctor?.doctorName}
-                        </Typography>
-                        <Typography
-                          variant="p"
-                          component="p"
-                          color="text.primary"
-                          sx={{ fontSize: ".7rem", fontWeight: "600" }}
-                        >
-                          {doctor?.degree}
-                        </Typography>
-                        <Typography
-                          variant="p"
-                          component="p"
-                          color="text.primary"
-                          sx={{
-                            fontSize: "1.2rem",
-                            fontWeight: "600",
-                            marginTop: "1rem",
-                          }}
-                        >
-                          {doctor?.currentposition}
-                        </Typography>
-                        <Typography
-                          variant="p"
-                          component="p"
-                          color="text.primary"
-                          sx={{
-                            fontSize: ".8rem",
-                            fontWeight: "600",
-                            marginTop: ".3rem",
-                          }}
-                        >
-                          {doctor?.depertmentName}
-                        </Typography>
-                        <Typography
-                          variant="p"
-                          component="p"
-                          color="text.primary"
-                          sx={{
-                            fontSize: ".8rem",
-                            fontWeight: "600",
-                            marginTop: ".3rem",
-                          }}
-                        >
-                          {doctor?.hospitalName}
-                        </Typography>
-                        <Button
-                          variant="contained"
-                          sx={{
-                            width: "100%",
-                            marginTop: "20px",
-                            fontSize: "1.2rem",
-                          }}
-                          size="large"
-                          onClick={() => handleOpen(doctor)}
-                          className="bg-black"
-                        >
-                          অ্যাপয়েন্টমেন্ট করুন
-                        </Button>
-                      </CardContent>
-                    </div>
-                  </Card>
-                </Item>
-              </Grid>
-            ))}
+            {doctors?.length > 0 ? (
+              doctors?.map((doctor, index) => (
+                <Grid item xs={2} sm={4} md={4} key={index}>
+                  <Item variant="div" component="div" sx={{ height: "100%" }}>
+                    <Card sx={{ maxWidth: 500, height: "100%" }}>
+                      <div style={{ height: "100%" }}>
+                        <CardMedia
+                          component="img"
+                          height="250"
+                          image={doctor?.img}
+                          alt="green iguana"
+                        />
+                        <CardContent>
+                          <Typography
+                            gutterBottom
+                            variant="p"
+                            component="p"
+                            className="text-color"
+                            sx={{ fontWeight: "700" }}
+                          >
+                            {doctor?.expert}
+                          </Typography>
+                          <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="h5"
+                            className=""
+                            sx={{ fontWeight: "900", fontSize: "1.3rem" }}
+                          >
+                            {doctor?.doctorName}
+                          </Typography>
+                          <Typography
+                            variant="p"
+                            component="p"
+                            color="text.primary"
+                            sx={{ fontSize: ".7rem", fontWeight: "600" }}
+                          >
+                            {doctor?.degree}
+                          </Typography>
+                          <Typography
+                            variant="p"
+                            component="p"
+                            color="text.primary"
+                            sx={{
+                              fontSize: "1.2rem",
+                              fontWeight: "600",
+                              marginTop: "1rem",
+                            }}
+                          >
+                            {doctor?.currentposition}
+                          </Typography>
+                          <Typography
+                            variant="p"
+                            component="p"
+                            color="text.primary"
+                            sx={{
+                              fontSize: ".8rem",
+                              fontWeight: "600",
+                              marginTop: ".3rem",
+                            }}
+                          >
+                            {doctor?.depertmentName}
+                          </Typography>
+                          <Typography
+                            variant="p"
+                            component="p"
+                            color="text.primary"
+                            sx={{
+                              fontSize: ".8rem",
+                              fontWeight: "600",
+                              marginTop: ".3rem",
+                            }}
+                          >
+                            {doctor?.hospitalName}
+                          </Typography>
+                          <Button
+                            variant="contained"
+                            sx={{
+                              width: "100%",
+                              marginTop: "20px",
+                              fontSize: "1.2rem",
+                            }}
+                            size="large"
+                            onClick={() => handleOpen(doctor)}
+                            className="bg-black"
+                          >
+                            অ্যাপয়েন্টমেন্ট করুন
+                          </Button>
+                        </CardContent>
+                      </div>
+                    </Card>
+                  </Item>
+                </Grid>
+              ))
+            ) : (
+              <div style={{ margin: "70px auto" }}>
+                Doctor not found, Please check your internet or try again!!
+              </div>
+            )}
           </Grid>
         </Box>
       )}

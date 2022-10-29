@@ -20,7 +20,7 @@ const OurServices = () => {
                 component={"h5"}
                 sx={{ fontSize: "1.5rem", fontWeight: "bold", mt: 2 }}
               >
-                বিশেষজ্ঞ চিকিৎসক খুজোন
+                বিশেষজ্ঞ চিকিৎসক খুজুঁন
               </Typography>
               {/* <Typography
                 variant="p"
