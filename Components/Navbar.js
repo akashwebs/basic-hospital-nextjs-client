@@ -13,12 +13,17 @@ import Link from "next/link";
 import Image from "next/image";
 
 const pages = [
-  { name: "Home", route: "" },
-  { name: "Doctors", route: "doctors" },
-  { name: "Helth Tips", route: "helth-tips" },
-  { name: "Image Gallary", route: "image-gallary" },
-  { name: "About Us", route: "about" },
-  { name: "Contact Us", route: "contact-us" },
+  { name: "হোম", route: "/" },
+  { name: "ডাক্তারগণ", route: "/doctors", target: "_self" },
+  { name: "স্বাস্থ্য বার্তা", route: "/helth-tips", target: "_self" },
+  { name: "ফটো গ্যালারি", route: "/image-gallary", target: "_self" },
+  {
+    name: "রক্তের প্রয়োজনে",
+    route: "https://bondhonroktodan.com/",
+    target: "_blank",
+  },
+  { name: "আমাদের সম্পর্কে", route: "/about", target: "_self" },
+  { name: "যোগাযোগ", route: "/contact-us", target: "_self" },
 ];
 
 const Navbar = () => {
@@ -96,8 +101,10 @@ const Navbar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Link href={`/${page.route}`}>
-                    <Typography textAlign="center">{page.name}</Typography>
+                  <Link href={`/${page.route}`} target="_blank">
+                    <Typography textAlign="center" sx={{ fontSize: "1rem" }}>
+                      {page.name}
+                    </Typography>
                   </Link>
                 </MenuItem>
               ))}
@@ -133,20 +140,24 @@ const Navbar = () => {
             }}
           >
             {pages.map((page) => (
-              <Link href={`/${page.route}`} key={page.name}>
-                <Button
-                  variant="contained"
-                  onClick={handleCloseNavMenu}
-                  sx={{
-                    my: 2,
-                    color: "white",
-                    display: "block",
-                    // border: "1px solid #fff",
-                    mr: 1,
-                  }}
-                >
-                  {page.name}
-                </Button>
+              <Link href={`${page.route}`} passHref key={page.name}>
+                <a target={page.target} rel="noopener noreferrer">
+                  <Button
+                    variant="contained"
+                    onClick={handleCloseNavMenu}
+                    sx={{
+                      my: 2,
+                      color: "white",
+                      display: "block",
+                      // border: "1px solid #fff",
+                      mr: 1,
+                      fontSize: "1.2rem",
+                      fontWeight: "500",
+                    }}
+                  >
+                    {page.name}
+                  </Button>
+                </a>
               </Link>
             ))}
           </Box>

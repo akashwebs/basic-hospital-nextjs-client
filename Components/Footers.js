@@ -24,7 +24,11 @@ function Copyright(props) {
         textAlign={"center"}
       >
         Developed by{" "}
-        <Link color="#fff" href="#" target={"_blank"}>
+        <Link
+          color="#fff"
+          href="https://www.facebook.com/profile.php?id=100007977125910"
+          target={"_blank"}
+        >
           Akash Shil
         </Link>
       </Typography>
@@ -45,7 +49,12 @@ const Footers = () => {
     >
       <Grid container spacing={4} justifyContent="space-evenly">
         <Grid item xs={12} sm={3}>
-          <Typography variant="h6" color="#fff" gutterBottom>
+          <Typography
+            variant="h6"
+            color="#fff"
+            gutterBottom
+            sx={{ fontSize: { sm: "1.6rem" } }}
+          >
             বেসিক এইড হসপিটাল
           </Typography>
           <Image src={"/logo.png"} width={100} height={100}></Image>
@@ -110,7 +119,7 @@ const Footers = () => {
                   পুলিশ(কচুয়া)
                 </Typography>
                 <Typography variant="p" component={"p"}>
-                  01716-xxxxxxx
+                  01713-373717
                 </Typography>
               </div>
             </li>
@@ -120,7 +129,7 @@ const Footers = () => {
                   ফায়ার সার্ভিস(কচুয়া)
                 </Typography>
                 <Typography variant="p" component={"p"} color="#fff">
-                  01716-xxxxxxx
+                  01728-546110
                 </Typography>
               </div>
             </li>
@@ -167,6 +176,11 @@ const Footers = () => {
             </Grid>
             <Grid item xs={4}>
               <Image src={"/app-store.png"} width={150} height={70}></Image>
+            </Grid>
+            <Grid item xs={4}>
+              <a href="https://bondhonroktodan.com/" target={"_blank"}>
+                <Image src={"/bondhon.png"} width={150} height={70}></Image>
+              </a>
             </Grid>
           </Grid>
         </Grid>

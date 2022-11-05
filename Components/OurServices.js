@@ -11,14 +11,18 @@ const OurServices = () => {
       <Container maxWidth="lg">
         <Grid container>
           <Grid item xs={12} sm={4}>
-            <Box pt={4}>
+            <Box pt={4} sx={{ color: "#111" }}>
               <Box sx={{ display: { sm: "none", md: "block" } }}>
                 <LocalPharmacyIcon sx={{ fontSize: "50px" }} />
               </Box>
               <Typography
                 variant="h5"
                 component={"h5"}
-                sx={{ fontSize: "1.5rem", fontWeight: "bold", mt: 2 }}
+                sx={{
+                  fontSize: "1.5rem",
+                  fontWeight: "bold",
+                  mt: 2,
+                }}
               >
                 বিশেষজ্ঞ চিকিৎসক খুজুঁন
               </Typography>
@@ -35,7 +39,7 @@ const OurServices = () => {
 
           <Grid item xs={12} sm={4}>
             <Paper>
-              <Box p={4} bgcolor={"#5db2ff"} color="#fff">
+              <Box p={4} bgcolor={"#5db2ff"} color="#111">
                 <PhoneForwardedIcon sx={{ fontSize: "50px" }} />
                 <Typography
                   variant="h5"
@@ -55,7 +59,7 @@ const OurServices = () => {
             </Paper>
           </Grid>
           <Grid item xs={12} sm={4}>
-            <Box p={4}>
+            <Box p={4} sx={{ color: "#111" }}>
               <MedicalServicesIcon sx={{ fontSize: "50px" }} />
               <Typography
                 variant="h5"

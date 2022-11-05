@@ -34,66 +34,29 @@ const AboutUs = ({ color }) => {
         <Grid item xs={12} sm={6}>
           {/* card imag  */}
 
-          <Swiper
-            spaceBetween={1}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-            }}
-            modules={[Autoplay]}
-            className="mySwiper"
-          >
-            <SwiperSlide>
-              <Card sx={{ maxWidth: 400 }} className="kader-gradiant">
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="auto"
-                    image="/kader.jpg"
-                    alt="green iguana"
-                  />
-                  <CardContent>
-                    <Typography
-                      gutterBottom
-                      variant="h5"
-                      component="h5"
-                      color={color ? color : "#111"}
-                    >
-                      Dr. Abdul Kader
-                    </Typography>
-                    <Typography variant="body2" color={color ? color : "#111"}>
-                      Chairman of Basic Aid Hosptial
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card sx={{ maxWidth: 400 }} className="kader-gradiant">
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="auto"
-                    image="/kader.jpg"
-                    alt="green iguana"
-                  />
-                  <CardContent>
-                    <Typography
-                      gutterBottom
-                      variant="h5"
-                      component="h5"
-                      color={color ? color : "#111"}
-                    >
-                      Dr. Abdul Kader
-                    </Typography>
-                    <Typography variant="body2" color={color ? color : "#111"}>
-                      Chairman of Basic Aid Hosptial
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </SwiperSlide>
-          </Swiper>
+          <Card sx={{ maxWidth: 400 }} className="kader-gradiant">
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="auto"
+                image="/kader.jpg"
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  component="h5"
+                  color={color ? color : "#111"}
+                >
+                  Abdul Kader
+                </Typography>
+                <Typography variant="body2" color={color ? color : "#111"}>
+                  Chairman of Basic Aid Hosptial
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Typography
