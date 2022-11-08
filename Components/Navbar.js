@@ -101,10 +101,12 @@ const Navbar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Link href={`/${page.route}`} target="_blank">
-                    <Typography textAlign="center" sx={{ fontSize: "1rem" }}>
-                      {page.name}
-                    </Typography>
+                  <Link href={`${page.route}`} passHref key={page.name}>
+                    <a target={page.target} rel="noopener noreferrer">
+                      <Typography textAlign="center" sx={{ fontSize: "1rem" }}>
+                        {page.name}
+                      </Typography>
+                    </a>
                   </Link>
                 </MenuItem>
               ))}

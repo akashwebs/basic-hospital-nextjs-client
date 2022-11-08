@@ -43,21 +43,7 @@ const About = () => {
         employeesLoading={employeesLoading}
       ></OurTeams>
       <div>
-        <ReactPaginate
-          breakLabel="..."
-          nextLabel="next >"
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={3}
-          marginPagesDisplayed={2}
-          pageCount={pageCount}
-          previousLabel="< previous"
-          renderOnZeroPageCount={null}
-          containerClassName="btn-group pagination"
-          pageLinkClassName="btn btn-sm"
-          previousLinkClassName="btn-sm btn"
-          nextLinkClassName="btn btn-sm"
-          activeClassName="pagination-active"
-        />
+     
       </div>
     </Box>
   );
