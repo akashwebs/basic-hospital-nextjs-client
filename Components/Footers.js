@@ -146,7 +146,7 @@ const Footers = () => {
                   যোকোন প্রয়োজনে
                 </Typography>
                 <Typography variant="p" component={"p"}>
-                  01716-xxxxxxxx
+                  01935-103080
                 </Typography>
               </div>
             </li>
@@ -172,7 +172,12 @@ const Footers = () => {
           </Typography>
           <Grid container spacing={4}>
             <Grid item xs={4}>
-              <Image src={"/facebook.png"} width={150} height={70}></Image>
+              <a
+                href="https://www.facebook.com/pages/Basic-Aid-Hospital/1153731414704130"
+                target={"_blank"}
+              >
+                <Image src={"/facebook.png"} width={150} height={70}></Image>
+              </a>
             </Grid>
             <Grid item xs={4}>
               <Image src={"/app-store.png"} width={150} height={70}></Image>
