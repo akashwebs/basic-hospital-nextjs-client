@@ -18,6 +18,10 @@ export default class MyDocument extends Document {
           />
           <meta name="emotion-insertion-point" content="" />
           {this.props.emotionStyleTags}
+          <meta
+            name="google-site-verification"
+            content="BDScD_jKfc0eD03EvfWDI_gM4cVrENiOYSgz4IgVOGc"
+          />
         </Head>
         <body>
           <Main />

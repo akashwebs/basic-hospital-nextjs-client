@@ -1,4 +1,3 @@
-import { Button } from "@mui/material";
 import Head from "next/head";
 import AboutUs from "../Components/AboutUs";
 import AllDoctors from "../Components/AllDoctors";
@@ -20,6 +19,9 @@ export default function Home() {
 
   return (
     <div>
+      <Head>
+        <title>Basic Aid Hospital</title>
+      </Head>
       <Header banners={data} isLoading={isLoading}></Header>
       <OurServices></OurServices>
       <AboutUs color={color}></AboutUs>

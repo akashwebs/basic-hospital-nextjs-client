@@ -156,7 +156,7 @@ const Footers = () => {
                   ডাক্তারের সিরিয়ালের জন্য
                 </Typography>
                 <Typography variant="p" component={"p"}>
-                  01716-xxxxxxx
+                  01935-103080
                 </Typography>
               </div>
             </li>

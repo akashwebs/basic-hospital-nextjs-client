@@ -53,7 +53,7 @@ const OurServices = () => {
                   component={"p"}
                   sx={{ fontSize: "1rem", fontWeight: "bold", mt: 2 }}
                 >
-                  যে কোনো জরুরী স্বাস্থ্য সেবা পেতে যোগাযোগ করুন 017-xxxxxxxxx
+                  যে কোনো জরুরী স্বাস্থ্য সেবা পেতে যোগাযোগ করুন 01935-103080
                 </Typography>
               </Box>
             </Paper>
