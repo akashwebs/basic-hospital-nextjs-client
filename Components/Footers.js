@@ -184,8 +184,9 @@ const Footers = () => {
               <a
                 href="https://play.google.com/store/apps/details?id=com.pg.basicaidandhospital"
                 target={"_blank"}
-              ></a>
-              <Image src={"/app-store.png"} width={150} height={70}></Image>
+              >
+                <Image src={"/app-store.png"} width={150} height={70}></Image>
+              </a>
             </Grid>
             <Grid item xs={4}>
               <a href="https://bondhonroktodan.com/" target={"_blank"}>
