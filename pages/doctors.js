@@ -3,6 +3,7 @@ import AllDoctors from "../Components/AllDoctors";
 import { allDoctors } from "../lib/helper";
 import { useQuery } from "@tanstack/react-query";
 const Doctors = () => {
+ 
   const { data: doctors, isLoading: doctorsLoading } = useQuery(
     ["doctors"],
     allDoctors

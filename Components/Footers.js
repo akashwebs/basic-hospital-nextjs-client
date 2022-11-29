@@ -60,9 +60,10 @@ const Footers = () => {
           <Image src={"/logo.png"} width={100} height={100}></Image>
           <>
             <Typography variant="p" component={"p"} color={"#fff"}>
-              মানবসেবাই আমাদের ধর্ম মানবসেবাই আমাদের ধর্ম মানবসেবাই আমাদের ধর্ম
-              মানবসেবাই আমাদের ধর্ম মানবসেবাই আমাদের ধর্ম মানবসেবাই আমাদের ধর্ম
-              মানবসেবাই আমাদের ধর্ম
+              বেসিক এইড এন্ড হসপিটাল হল একটি পূর্ণ-পরিষেবা হাসপাতাল যা বিস্তৃত
+              পরিসরের ইনপেশেন্ট এবং বহির্বিভাগের রোগীদের পরিষেবা প্রদান করে।
+              আমরা আমাদের রোগীদের সর্বোচ্চ মানের যত্ন এবং গ্রাহক পরিষেবা প্রদান
+              করতে প্রতিশ্রুতিবদ্ধ।
             </Typography>
           </>
         </Grid>
@@ -180,6 +181,10 @@ const Footers = () => {
               </a>
             </Grid>
             <Grid item xs={4}>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.pg.basicaidandhospital"
+                target={"_blank"}
+              ></a>
               <Image src={"/app-store.png"} width={150} height={70}></Image>
             </Grid>
             <Grid item xs={4}>
